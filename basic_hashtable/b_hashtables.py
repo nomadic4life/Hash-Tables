@@ -25,7 +25,10 @@ class BasicHashTable:
 # Research and implement the djb2 hash function
 # '''
 def hash(string, max):
-    pass
+    val = 5381
+    for x in string:
+        val = ((val << 5)+val)+ord(x)
+    return val % max
 
 
 # '''
